@@ -5,5 +5,8 @@
         "removeComments": true,
         "preserveConstEnums": true,
         "sourceMap": true
-    }
+    },
+    "exclude": [
+        "index.ts"
+    ]
 }

@@ -1,24 +1,29 @@
-export class Chat {
 
-    constructor(private _messenger?: String,  private _messages?: Array<{text: string}>, _createdAt?: String ) {
+export class Chat {
+    constructor(private _messengers?: Array<{name: string}>,  private _messages?: Array<{text: string}>, public _createdAt?: any ) {
         // _createdAt = new Date().toLocaleString()
-        // this._messenger = _messenger
+        // this._messengers = _messengers
     }
 
-    // get messenger() {
-    //     return this._messenger
-    // }
+    getMessenger() {
+        return this._messengers
+    }
 
-    // get messages() {
-    //     return this._messages
-    // }
+    getMessages() {
+        return this._messages
+    }
 
-    // get createdAt() {
-    //     return this.createdAt
-    // }
+    getCreatedAt() {
+        return this._createdAt
+    }
 
-    // set messenger(person) {
-    //         this._messenger = person
-    // } 
+    setMessenger(person: {name: string}) {
+            this._messengers.push(person)
+    } 
+
+    setMessages(message: {text: string}) {
+            this._messages.push(message)
+    } 
 }
+
 
